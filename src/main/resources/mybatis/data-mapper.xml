@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding= "UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="data-mapper">
+    <select id="selectAllPSC" resultType="com.allrisk.test2.PSC">
+        select * from psc order by id
+    </select>
+ 
+    <select id ="selectOnePSC" resultType="com.allrisk.test2.PSC">
+        select * from psc where id = #{id}
+    </select>
+ 
+    <insert id ="insertPSC" parameterType="com.allrisk.test2.PSC">
+        insert into psc (mesto, psc) values (#{mesto}, #{psc})
+    </insert>
+ 
+</mapper>
